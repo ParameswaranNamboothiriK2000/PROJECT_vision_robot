@@ -220,7 +220,6 @@ DISPLAY=:0 QT_QPA_PLATFORM=xcb ros2 run vision_robot_controller vision_node.py
 ## 🔮 Future Improvements
 
 - [ ] Real depth estimation using stereo or depth camera
-- [ ] Kalman filter for smoother trajectory prediction
 - [ ] Multi-object tracking and target selection UI
 - [ ] Gazebo simulation with full physics
 - [ ] Camera intrinsic calibration for accurate 3D projection
