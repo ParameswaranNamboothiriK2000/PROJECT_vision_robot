@@ -229,7 +229,8 @@ DISPLAY=:0 QT_QPA_PLATFORM=xcb ros2 run vision_robot_controller vision_node.py
 
 ## 👨‍💻 Author
 
-R&D Engineer — Computer Vision and Robotics
+**Parameswaran Namboothiri K**
+R&D Engineer — Computer Vision & Robotics
 Specialization: 3D vision systems, depth cameras, pose estimation, industrial metrology
 Tools: Python, C++, ROS 2, MoveIt 2, OpenCV, YOLO, Open3D, CUDA
 
