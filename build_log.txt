@@ -1,0 +1,4 @@
+Starting >>> vision_robot_controller
+Finished <<< vision_robot_controller [16.4s]
+
+Summary: 1 package finished [16.6s]

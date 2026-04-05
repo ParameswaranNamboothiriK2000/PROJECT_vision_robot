@@ -1,0 +1,37 @@
+version: "3.8"
+
+services:
+  vision_robot:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    image: vision_robot_controller:latest
+    container_name: vision_robot_container
+
+    # Required for ROS 2 DDS networking
+    network_mode: host
+    ipc: host
+
+    # GPU access for YOLO11 CUDA inference
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+    # X11 forwarding for RViz and OpenCV windows
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=all
+
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ./src:/root/ros2_ws/src:ro      # live source mount (optional)
+
+    stdin_open: true
+    tty: true
+    restart: unless-stopped

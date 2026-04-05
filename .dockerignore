@@ -1,0 +1,10 @@
+build/
+install/
+log/
+.git/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.vscode/
+*.bag
